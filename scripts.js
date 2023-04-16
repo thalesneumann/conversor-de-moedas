@@ -8,11 +8,9 @@ const bitcoin = 0.0000067
 const convertValues = () => {
     const inputReais = document.getElementById('input-real').value //quero SÓ o valor
     const realValueText = document.getElementById('real-value-text')
-    
-
     const currencyValueText = document.getElementById('currency-value-text')
 
-    realValueText.innerHTML = new Intl.NumberFormat('pt-BR',
+    realValueText.innerHTML === new Intl.NumberFormat('pt-BR',
         { style: 'currency', currency: 'BRL' }
     ).format(inputReais)
 
@@ -60,7 +58,7 @@ convertValues() //assim converte automaticamente com a CHANGE
 }
 
 button.addEventListener('click', convertValues)//'click' é um evento, assim como 'focus' é outro
-select.addEventListener('change', changeCurrency)
+select.addEventListener('change', changeCurrency)// 'change' também
 
 
 
