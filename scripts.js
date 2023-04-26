@@ -6,7 +6,7 @@ const euro = 5.9
 const bitcoin = 0.0000067
 
 const convertValues = () => {
-    const inputReais = document.getElementById('input-real').value //quero SÓ o valor
+    const inputReais = document.getElementById('input-real').value
     const realValueText = document.getElementById('real-value-text')
     const currencyValueText = document.getElementById('currency-value-text')
 
@@ -42,32 +42,20 @@ const changeCurrency = () => {
 
 
     if (select.value === '€ Euro') {
-        currencyName.innerHTML = 'Euro' //MUDEI A MOEDA
-        currencyImg.src = './assets/euro.png' // MUDEI A BANDEIRA
+        currencyName.innerHTML = 'Euro' 
+        currencyImg.src = './assets/euro.png' 
     }
     if (select.value === 'US$ Dólar americano') {
-        currencyName.innerHTML = 'Dólar americano' //voltei A MOEDA
-        currencyImg.src = './assets/us.png' // voltei A BANDEIRA
+        currencyName.innerHTML = 'Dólar americano' 
+        currencyImg.src = './assets/us.png' 
     }
     if (select.value === 'Bitcoin') {
         currencyName.innerHTML = 'Bitcoin'
         currencyImg.src = './assets/bitcoin.png' 
     }
-convertValues() //assim converte automaticamente com a CHANGE
+convertValues() 
 
 }
 
-button.addEventListener('click', convertValues)//'click' é um evento, assim como 'focus' é outro
-select.addEventListener('change', changeCurrency)// 'change' também
-
-
-
-
-
-
-
-// 1) guardei meu 'convert-button' numa variável como BUTTON
-// 2) criei uma ARROW FUNCTION com nome que lembre sua utilidade
-// 3) adicionei um EVENT LISTENER 'click' e coloquei um FUNCTION
-// 4) chama uma função
-// 5) pega o valor do input e faz o cálculo
+button.addEventListener('click', convertValues)
+select.addEventListener('change', changeCurrency)
